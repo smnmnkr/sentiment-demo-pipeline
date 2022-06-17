@@ -101,7 +101,7 @@ class Trainer:
                 self.metric.reset()
                 loss_eval: float = 0.0
                 for idx, batch in load_iterator(
-                        self.data['eval'],
+                        self.data['dev'],
                         collate_fn=self.collation_fn,
                         batch_size=self.config["batch_size"],
                         shuffle=self.config["shuffle"],
