@@ -2,11 +2,11 @@
   "seed": 1,
   "cuda": 5,
   "debug": false,
-  "out_path": "./",
+  "out_path": "./results/",
   "data": {
     "paths": {
       "train": "./data/tweets.train.csv",
-      "dev": "./data/tweets.dev.csv"
+      "eval": "./data/tweets.eval.csv"
     },
     "polarities": {
       "neutral": 0,
@@ -29,15 +29,14 @@
     }
   },
   "trainer": {
-    "seed": 1,
     "epochs": 25,
     "shuffle": true,
-    "batch_size": 32,
+    "batch_size": 128,
     "num_workers": 0,
     "report_rate": 1,
     "max_grad_norm": 2.0,
     "optimizer": {
-      "lr": 2e-4,
+      "lr": 1e-3,
       "weight_decay": 1e-2,
       "betas": [
         0.9,

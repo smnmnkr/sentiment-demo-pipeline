@@ -47,7 +47,6 @@ class Trainer:
     @property
     def default_config(self) -> dict:
         return {
-            "seed": 1,
             "epochs": 25,
             "shuffle": True,
             "batch_size": 32,
@@ -101,7 +100,7 @@ class Trainer:
                 self.metric.reset()
                 loss_eval: float = 0.0
                 for idx, batch in load_iterator(
-                        self.data['dev'],
+                        self.data['eval'],
                         collate_fn=self.collation_fn,
                         batch_size=self.config["batch_size"],
                         shuffle=self.config["shuffle"],
