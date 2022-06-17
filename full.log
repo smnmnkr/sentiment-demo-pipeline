@@ -1,0 +1,15 @@
+> Loaded logger: ./full.log
+> Setup PyTorch: seed(1), cuda(None)
+
+[--- LOAD DATA -> (['train', 'dev']) ---]
+> Load/Init from ./data/tweets.train.csv
+> Load/Init from ./data/tweets.dev.csv
+
+[--- LOAD COMPONENTS ---]
+> Init Encoder: 'bert-base-uncased'
+> f(__init__) took: 15.4974 sec
+> Init BERT-Head (MLP), trainable parameters: 197635
+
+[--- TRAIN -> ./data/tweets.train.csv ---]
+> Warning: Training interrupted by user!
+> Load best model based on evaluation loss.

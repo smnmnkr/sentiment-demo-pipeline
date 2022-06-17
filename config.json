@@ -1,0 +1,49 @@
+{
+  "seed": 1,
+  "cuda": 5,
+  "debug": false,
+  "out_path": "./",
+  "data": {
+    "paths": {
+      "train": "./data/tweets.train.csv",
+      "dev": "./data/tweets.dev.csv"
+    },
+    "polarities": {
+      "neutral": 0,
+      "negative": 1,
+      "positive": 2
+    },
+    "data_label": "text",
+    "target_label": "label"
+  },
+  "model": {
+    "encoding": {
+      "model": "bert-base-uncased",
+      "layers": [
+        -1
+      ]
+    },
+    "neural": {
+      "hid_size": 256,
+      "dropout": 0.3
+    }
+  },
+  "trainer": {
+    "seed": 1,
+    "epochs": 25,
+    "shuffle": true,
+    "batch_size": 32,
+    "num_workers": 0,
+    "report_rate": 1,
+    "max_grad_norm": 2.0,
+    "optimizer": {
+      "lr": 2e-4,
+      "weight_decay": 1e-2,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-8
+    }
+  }
+}
